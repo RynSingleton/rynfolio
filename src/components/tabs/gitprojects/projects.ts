@@ -21,14 +21,14 @@ export const projects: Project[] = [
         title: "(ID) audiovis",
         desc: "(In Development) I've always been super interested in actually utilizing the Fast Fourier Transform on my own. With a little matplotlib and numpy, a simple audio visualizer from .wav files.",
         img: "/images/visuals.gif",
-        href: "tbd",
+        href: "https://github.com/RynSingleton/audiovis",
     },
         {
         id: 2,
         title: "Golden FPM",
         desc: "This is a golden IEE FPM implementation. It's a polished version of a project I completed in my advanced computer archetecture class. It's written in Verilog, and extensive documentation has been attached, as VHDL is a bit paiunful to read without it.",
         img: "/images/mult.jpg",
-        href: "tbd",
+        href: "https://github.com/RynSingleton/fpm",
     },
         {
         id: 3,
