@@ -7,7 +7,8 @@ export function Git() {
   const [proj, setProj] = useState(-1);
 
   return (
-      <div className="grid lg:grid-rows-3 md:grid-cols-3 sm:grid-rows-3 gap-5">
+    <div>
+      <div className="grid lg:grid-rows-2 md:grid-cols-2 sm:grid-rows-2 gap-5">
         <div className="grid grid-cols-3 grid-rows-1 gap-4 w-full">
           {projects.map((project) => (<ProjectCard key={project.id} project={project} onSelect={setProj}/>))}
         </div>
@@ -16,45 +17,40 @@ export function Git() {
                 <TypeAnimation 
                   sequence={[projects[proj].desc]} 
                   wrapper="span"
-                  speed={2}
-                  style={{fontSize: '1em'}}
+                  speed={75}
+                  style={{fontSize: 'clamp(1rem, 2.5vw, 2em)'}}
                   repeat={0}
                   cursor={true}/>
           </div>
         )}
-        <span className="bg-zinc-900 border-solid rounded-none border-zinc-800 border-2 p-2 slide-in">
-          <TypeAnimation 
-              sequence={['Why I code:']} 
-              wrapper="span"
-              speed={2}
-              style={{fontSize: '1em'}}
-              repeat={0}
-              cursor={true}/>
-        </span>
       </div>
+    </div>
   )
 }
 
 
 function ProjectCard({project, onSelect}: {project: Project, onSelect: (id: number) => void}) {
   return (
-      <div className="flex-1 hover:-translate-y-2 transition-transform duration-200 rounded-lg bg-zinc-900 p-4 justify-center slide-up">
-        <a className="flex flex-col items-center" onClick={()=> onSelect(project.id)}>
-          <Image 
+      <div className="flex-1 hover:-translate-y-2 transition-transform duration-200 rounded-lg bg-zinc-900 p-4 justify-center slide-up min-w-0"  onClick={()=> onSelect(project.id)}>
+        <div className="flex flex-col items-center">
+          <a href={project.href}>
+            <Image 
             src={project.img}
             alt={project.title}
             width={400}
             height={300}
             className="rounded-lg object-cover"
           />
+          </a>
           <TypeAnimation 
                   sequence={[project.title]} 
                   wrapper="span"
                   speed={2}
-                  style={{fontSize: '1em'}}
+                  style={{fontSize: '.75rem'}}
                   repeat={0}
-                  cursor={false}/>
-        </a>
+                  cursor={false}
+                  className="p-2"/>
+        </div>
       </div>
   )
 }
