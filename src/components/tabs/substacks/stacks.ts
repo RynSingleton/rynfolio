@@ -35,5 +35,11 @@ export const stacks: Stack[] = [
     title: "> Logs of Team 25-A",
     href: "https://substack.com/@ryntintinn/note/p-193924881?utm_source=notes-share-action&r=2ksw6h",
     desc: "An experimental narrative. It's a shorter piece, but it's written entirely in logs created by an automatic business management software. A fun read with an interesting turn towards the end."
+},
+{
+    id: 5,
+    title: "> A Little More",
+    href: "https://substack.com/@ryntintinn/note/p-197357096?r=2ksw6h&utm_source=notes-share-action&utm_medium=web",
+    desc: "Poetry! I don't really practice this at all, but I really did like the theming of this one. Using refrains was also really fun, I kept adjusting it, but I think what I ended up settling on was on point without being on the nose."
 }
 ]
